@@ -24,6 +24,7 @@
     <header class="header">
       <nav>
         <a class="profile" href="#"><span class="avatar"></span> {% trans "Profile" %}</a>
+        <a href="#">{% trans "Contacts" %}</a>
         <a href="#">{% trans "Exit" %}</a>
       </nav>
     </header>
@@ -31,6 +32,17 @@
     <div class="middle">
       <div class="container">
         <main class="content">
+          {# Django messages framework #}
+          {% if messages %}
+          <section class="messages">
+            {% for message in messages %}
+            <div class="message{% if message.tags %} {{ message.tags }}{% endif %}">
+              {{ message }}
+            </div>
+            {% endfor %}
+          </section>
+          {% endif %}
+
         {% block content %}
         {% endblock content %}
         </main>
