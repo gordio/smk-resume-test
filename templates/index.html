@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n staticfiles compressed %}
+
+
+{% block title %}{% trans "Index" %} — {{ block.super }}{% endblock title %}
+
+{% block head %}
+  {{ block.super }}
+  {# {% compressed_css 'index' %} #}
+  {# {% compressed_js 'index' %} #}
+{% endblock head %}
+
+{% block content %}
+  <h1>Hello world</h1>
+  <p>Basic project work fine. Have coding fun ;-Ъ</p>
+{% endblock content %}

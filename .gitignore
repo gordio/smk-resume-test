@@ -1,0 +1,11 @@
+*.py[co]
+*__pycache__/*
+*.mo
+*~
+*.log
+*.sqlite3
+*.sublime-workspace
+venv
+public/static/[^.]*
+public/media/[^.]*
+smk_resume/settings_local.py

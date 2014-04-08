@@ -1,0 +1,58 @@
+{% load i18n staticfiles %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% trans "{{ 'SMK Resume' }}" %}{% endblock title %}</title>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+  {# Use {{ block.super }} in relative templates #}
+  {% block head %}
+  {% load compressed %}
+  {% compressed_css 'main' %}
+  {% endblock head %}
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <nav>
+        <a class="profile" href="#"><span class="avatar"></span> {% trans "Profile" %}</a>
+        <a href="#">{% trans "Exit" %}</a>
+      </nav>
+    </header>
+
+    <div class="middle">
+      <div class="container">
+        <main class="content">
+        {% block content %}
+        {% endblock content %}
+        </main>
+      </div>
+
+      <aside class="left_sidebar">
+      {% block left_sidebar %}
+      # Left_SIDEBAR #
+      {% endblock left_sidebar %}
+      </aside>
+
+      <aside class="right_sidebar">
+      {% block right_sidebar %}
+      # Right_SIDEBAR #
+      {% endblock right_sidebar %}
+      </aside>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>by Gordio</p>
+  </footer>
+
+</body>
+</html>
