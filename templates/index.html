@@ -2,15 +2,219 @@
 {% load i18n staticfiles compressed %}
 
 
-{% block title %}{% trans "Index" %} — {{ block.super }}{% endblock title %}
+{% block title %}{% trans "Resume: Web/Django Developer - Oleg Gordienko" %} — {{ block.super }}{% endblock title %}
 
 {% block head %}
   {{ block.super }}
-  {# {% compressed_css 'index' %} #}
-  {# {% compressed_js 'index' %} #}
+  {% compressed_css 'resume' %}
+  {% compressed_js 'resume' %}
 {% endblock head %}
 
+{% block left_sidebar %}
+  <nav class="resume-menu" role="resume-menu">
+    <a href="#header">Header</a>
+    <a href="#objective">Objective</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#employment">Employment</a>
+    <a href="#education">Education</a>
+  </nav>
+{% endblock %}
+
 {% block content %}
-  <h1>Hello world</h1>
-  <p>Basic project work fine. Have coding fun ;-Ъ</p>
+  <header id="header">
+    <h1>Oleg Gordienko</h1>
+    <h3>Web Developer</h3>
+    <span class="contacts">
+      <span class="noprint">
+        <a href="mailto:me@gordio.pp.ua">me@gordio.pp.ua</a> or <a href="tel:+380976934976">+38 (097) 693-49-76</a> or <a href="callto:viliker">Skype: viliker</a> and <a href="http://github.com/gordio">GitHub</a>
+      </span>
+    </span>
+  </header>
+
+
+  <article id="objective" class="cv-block">
+    <h1>Objective</h1>
+    <section class="full">
+      <p>To find a company that will allow me to fully utilise my experience, knowledge and creativity to improve its products and make the world a better place.</p>
+    </section>
+  </article>
+
+
+  <article id="skills" class="cv-block">
+    <h1>Skills</h1>
+    <section>
+      <h4>Front End</h4>
+      <ul>
+        <li>HTML5, CSS3</li>
+        <li>LESS, SASS, HAML</li>
+        <li>Cross-browser</li>
+        <li>Responsive, Adaptive</li>
+        <li>Grid systems</li>
+        <li>Graceful degradation</li>
+        <li>Progressive enhancement</li>
+        <li>Foundation, Bootstrap</li>
+        <li>WebKit Inspector, Firebug</li>
+      </ul>
+    </section>
+    <section>
+      <h4>Back End</h4>
+      <ul>
+        <li>Linux, OS X, Unix</li>
+        <li>Django, FLask, web2py, Scrapy</li>
+        <li>Ajax</li>
+        <li>Fabric, Waff, Makefile</li>
+        <li>PostgreSQL, MySQL, Sqlite</li>
+        <li>Apache, nginx, lighttpd</li>
+        <li>uwsgi, mod_python</li>
+        <li>Git, Mercurial, Subversion</li>
+        <li>Markdown, Textile</li>
+      </ul>
+    </section>
+    <section class="full">
+      <h4>More:</h4>
+      <ul>
+        <li>C, Python, Shell Scripting, JavaScript</li>
+        <li>OpenMap, Leaflet, jQuery, Ember.js, Chromium Extensions</li>
+        <li>XML, JSON, YAML, SQL, CSV</li>
+        <li>GIMP, Sublime Text 3, Xcode</li>
+        <li>Selenium IDE, jMeter</li>
+      </ul>
+    </section>
+  </article>
+
+
+  <article id="experience" class="cv-block">
+    <h1>Experience</h1>
+    <section>
+      <h4><a href="http://nri.pp.ua/">NRI Photographer</a></h4>
+      <a href="http://github.com/gordio/nri-site">Sources on Github</a>
+      <p>Simple portfolio site for Photographer with contact form.</p>
+      <ul>
+        <li>Python</li>
+        <li>Django 1.7</li>
+        <li>HTML5/CSS3</li>
+        <li>django-pipeline</li>
+        <li>django-simple-captcha</li>
+        <li>easy-thumbnails</li>
+        <li>Fabric</li>
+      </ul>
+    </section>
+    <section>
+      <h4><a href="http://gordio.pp.ua/">Gordio Site</a></h4>
+      <a href="http://github.com/gordio/gordio-site">Sources on Github</a>
+      <p>Current version of my personal site.</p>
+      <ul>
+        <li>Python</li>
+        <li>uWSGI</li>
+        <li>nginx</li>
+        <li><del>mod_python</del></li>
+        <li>Django 1.7a2</li>
+        <li>HTML5/CSS3</li>
+        <li>django-pipeline</li>
+        <li>django-simple-captcha</li>
+        <li>Fabric</li>
+      </ul>
+    </section>
+    <section>
+      <h4><del>Gordio Personal site</del></h4>
+      <a href="http://github.com/gordio/old-gordio-site">Sources on Github</a>
+      <p>Old version.</p>
+      <ul>
+        <li>Python</li>
+        <li>Flask</li>
+        <li>Apache mod_python</li>
+        <li>Flask-Assets</li>
+        <li>Flask-WTF</li>
+        <li>Flask-SQLAlchemy</li>
+      </ul>
+    </section>
+    <section>
+      <h4>Tmux-sb</h4>
+      <a href="https://github.com/gordio/tmux-sb">Sources on Github</a>
+      <p>The status bar addon for Tmux for creation a fancy status bar of system resources loading. Creating this program I follow KISS ideology.</p>
+      <ul>
+        <li>C</li>
+        <li>*NIX Sockets</li>
+        <li>Daemonize</li>
+        <li>Makefile</li>
+      </ul>
+    </section>
+    <section>
+      <h4>TimeZero Shell</h4>
+      <a href="https://github.com/gordio/timezero-shell">Sources on Github</a>
+      <p>GTK+-2.0 based Linux client for Online Game. Used the WebKit for communication with flash and json-c configs.</p>
+      <ul>
+        <li>C</li>
+        <li>json-c</li>
+        <li>GTK+-2.0</li>
+        <li>WebKit-gtk</li>
+        <li><del>Waff</del></li>
+        <li>Makefile</li>
+      </ul>
+    </section>
+    <section>
+      <h4>Show-or-Open</h4>
+      <a href="https://github.com/gordio/show-or-open">Sources on Github</a>
+      <p>Execute command or switch to opened window. This script I'm using with OpenBox.</p>
+      <ul>
+        <li>Shell Scripting</li>
+        <li>X11 tools</li>
+      </ul>
+    </section>
+  </article>
+
+
+  <article id="employment" class="cv-block">
+    <h1>Employment</h1>
+    <section>
+      <h4>Secondary Admin <small>in</small> <span>HLink ISP</span></h4>
+      <p>WiFi and Ethernet Internet Service Provider.</p>
+      <ul>
+        <li>WiFi AP/Bridge's administrator (500+ clients)</li>
+        <li>Simple Infrastructure Monitoring</li>
+        <li>Resolving the problrems with clients (hardware or/and software problrems)</li>
+      </ul>
+    </section>
+    <section>
+      <h4>Web Developer <small>in</small> <span>Freelance</span></h4>
+      <p>Design and development the web projects with involving the such languages and technologies.</p>
+      <ul>
+        <li>HTML/CSS, HTML5/CSS3</li>
+        <li>Pure JavaScript, Simple jQuery</li>
+        <li>Wordpress, Mod-X, Django</li>
+      </ul>
+    </section>
+    <section>
+      <h4>Service Engineer <small>in</small> <span>KORD Store</span></h4>
+      <p>Configuration and maintenance support specialist, technical consultant.</p>
+      <ul>
+        <li>Configure and maintain Computers and Notebooks</li>
+        <li>Maintain PC/Printer/Devices</li>
+        <li>Refill toner based and liquid printer cartridges</li>
+        <li>Fix PC/Printers/Devices</li>
+        <li>Support clients</li>
+      </ul>
+    </section>
+  </article>
+
+
+  <article id="education" class="cv-block">
+    <h1>Education</h1>
+    <section class="full">
+      <ul>
+        <!-- <li>2014 - 2014 - Coursera: Python</li> -->
+        <li>2013 - 2014+ — Introduction to Electrical Engineering and Computer Science I - MIT OpenCourse</li>
+        <!-- вспомнить или удалить
+        2013 — Portnov Computer School - QA Online Course 
+        2012 — 
+        2011 — Lynda.com: iPhone, JavsScript, еще что-то :(
+        -->
+        <li>2010 - 2011 — Intuit: HTML, CSS, Python, C</li>
+        <li>2009 - 2009 — Google's Python Class</li>
+        <li>2007 - 2007 — Programming C course for Windows and *NIX</li>
+        <li>1996 - 2006 — Krivoy Rog High School № 48</li>
+      </ul>
+    </section>
+  </article>
 {% endblock content %}

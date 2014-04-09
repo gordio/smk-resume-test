@@ -63,18 +63,32 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'resume': {
+        'source_filenames': (
+          'css/resume.css',
+        ),
+        'output_filename': 'assets/resume.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
 }
 
 # PIPELINE_DISABLE_WRAPPER = True
-# PIPELINE_JS = {
-#     'main': {
-#         'source_filenames': (
-#           'js/main.js',
-#           'js/main-init.js',
-#         ),
-#         'output_filename': 'assets/main.js',
-#     }
-# }
+PIPELINE_JS = {
+    'main': {
+        'source_filenames': (
+          'js/jquery-1.11.0.js',
+        ),
+        'output_filename': 'assets/main.js',
+    },
+    'resume': {
+        'source_filenames': (
+          'js/resume.js',
+        ),
+        'output_filename': 'assets/resume.js',
+    },
+}
 
 ACCOUNT_ACTIVATION_DAYS = 3
 
