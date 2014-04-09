@@ -1,4 +1,4 @@
-{% load i18n staticfiles %}
+{% load i18n staticfiles compressed %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +13,6 @@
 
   {# Use {{ block.super }} in relative templates #}
   {% block head %}
-  {% load compressed %}
   {% compressed_css 'main' %}
   {% endblock head %}
 </head>
@@ -22,11 +21,7 @@
   <div class="wrapper">
 
     <header class="header">
-      <nav>
-        <a class="profile" href="#"><span class="avatar"></span> {% trans "Profile" %}</a>
-        <a href="#">{% trans "Contacts" %}</a>
-        <a href="#">{% trans "Exit" %}</a>
-      </nav>
+      {% include "nav.html" %}
     </header>
 
     <div class="middle">
@@ -50,20 +45,18 @@
 
       <aside class="left_sidebar">
       {% block left_sidebar %}
-      # Left_SIDEBAR #
       {% endblock left_sidebar %}
       </aside>
 
       <aside class="right_sidebar">
       {% block right_sidebar %}
-      # Right_SIDEBAR #
       {% endblock right_sidebar %}
       </aside>
     </div>
   </div>
 
   <footer class="footer">
-    <p>by Gordio</p>
+    <p>Created by <a href="http://gordio.pp.ua/">Gordio</a> <span class="right">2014 Creative Commons</span></p>
   </footer>
 
 </body>
