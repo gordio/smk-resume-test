@@ -1,0 +1,34 @@
+{% extends 'userena/base_profile.html' %}
+{% load i18n %}
+{% load url from future %}
+
+{% block title %}{% blocktrans with profile.user.username as username %}{{ username }}'s profile.{% endblocktrans %}{% endblock %}
+
+
+{% block content %}
+  <div id="details">
+    {% block profile_details %}
+      <img class="mugshot" src="{{ profile.get_mugshot_url }}" alt="{% trans "Your mugshot" %}" />
+      <dl>
+        {% block profile_definition_list %}
+          {% if profile.user.get_full_name %}
+            <dt>{% trans "Name" %}</dt>
+            <dd>{{ profile.user.get_full_name }}</dd>
+          {% endif %}
+          {% if profile.user.email and not hide_email %}
+            <dt>{% trans "Email" %}</dt>
+            <dd>{{ profile.user.email }}</dd>
+          {% endif %}
+          {% if profile.burn_date %}
+            <dt>{% trans "Burn Date" %}</dt>
+            <dd>{{ profile.burn_date }}</dd>
+          {% endif %}
+          {% if profile.mobile_phone %}
+            <dt>{% trans "Mobile Phone" %}</dt>
+            <dd>{{ profile.mobile_phone }}</dd>
+          {% endif %}
+        {% endblock %}
+      </dl>
+    {% endblock %}
+  </div>
+{% endblock %}

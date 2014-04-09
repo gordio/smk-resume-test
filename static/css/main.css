@@ -112,14 +112,14 @@ form .errorlist {
     overflow: hidden;
 }
 .content {
-    padding: 0 180px 0 180px;
+    padding: 0 180px 0 200px;
 }
 
 
 /* Left Sidebar */
 .left_sidebar {
     float: left;
-    width: 180px;
+    width: 190px; /* -10px */
     margin-left: -100%;
     position: relative;
 }

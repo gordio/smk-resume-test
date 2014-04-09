@@ -33,7 +33,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'pipeline',
-    'registration',
+    'accounts',
+    'guardian',
+    'easy_thumbnails',
+    'userena',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
@@ -47,18 +50,9 @@ PIPELINE_CSS = {
           'css/normalize.css',
           'css/messages.css',
           'css/main.css',
+          'css/forms.css'
         ),
         'output_filename': 'assets/main.css',
-        'extra_context': {
-            'media': 'screen,projection',
-        },
-    },
-    'registration': {
-        'source_filenames': (
-          'css/forms.css',
-          'css/registration.css',
-        ),
-        'output_filename': 'assets/registration.css',
         'extra_context': {
             'media': 'screen,projection',
         },
@@ -90,7 +84,20 @@ PIPELINE_JS = {
     },
 }
 
-ACCOUNT_ACTIVATION_DAYS = 3
+ANONYMOUS_USER_ID = -1
+
+AUTH_PROFILE_MODULE = 'accounts.MyProfile'
+
+LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
+
+
+AUTHENTICATION_BACKENDS = (  
+    'userena.backends.UserenaAuthenticationBackend',  
+    'guardian.backends.ObjectPermissionBackend',  
+    'django.contrib.auth.backends.ModelBackend',  
+) 
 
 
 MIDDLEWARE_CLASSES = (
