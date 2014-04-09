@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'pipeline',
+    'registration',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
@@ -52,6 +53,16 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'registration': {
+        'source_filenames': (
+          'css/forms.css',
+          'css/registration.css',
+        ),
+        'output_filename': 'assets/registration.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
 }
 
 # PIPELINE_DISABLE_WRAPPER = True
@@ -64,6 +75,8 @@ PIPELINE_CSS = {
 #         'output_filename': 'assets/main.js',
 #     }
 # }
+
+ACCOUNT_ACTIVATION_DAYS = 3
 
 
 MIDDLEWARE_CLASSES = (
