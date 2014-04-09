@@ -12,19 +12,19 @@
     </span>
     {{ form.username.label_tag }}
     {{ form.username.errors }}
-    <input type="text" id='id_{{ form.username.name }}' name='{{ form.username.name }}' pattern="[a-zA-Z]{1}[a-zA-Z@.+-_#]*" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" placeholder="{% trans "Username" %}" autofocus required>
+    <input type="text" id='id_{{ form.username.name }}' name='{{ form.username.name }}' pattern="[a-zA-Z]{1}[a-zA-Z@.+-_#]*" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" placeholder="{% trans "Username" %}" tabindex=1 autofocus required>
 
     <span class="right">
-      <a href="{% url 'auth_password_reset' %}" title='{% trans "Reset password" %}'>{% trans "Forgot?" %}</a>
+      <a href="{% url 'auth_password_reset' %}" title='{% trans "Reset password" %}' tabindex=4>{% trans "Forgot?" %}</a>
     </span>
     {{ form.password.label_tag }}
     {{ form.password.errors }}
-    <input type="password" id='id_{{ form.password.name }}' name='{{ form.password.name }}' value="{% if form.password.value %}{{ form.password.value }}{% endif %}" placeholder="{% trans "Password" %}" required>
+    <input type="password" id='id_{{ form.password.name }}' name='{{ form.password.name }}' value="{% if form.password.value %}{{ form.password.value }}{% endif %}" placeholder="{% trans "Password" %}" tabindex=2 required>
 
-    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="hidden" name="next" value="{{ next }}">
 
     <div class="buttons">
-      <input type="submit" value="{% trans 'Log in' %}" />
+      <input type="submit" tabindex=3 value="{% trans 'Log in' %}">
     </div>
   </form>
 {% endblock %}

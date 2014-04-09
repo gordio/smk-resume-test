@@ -27,8 +27,8 @@
     <input type="password" id='id_{{ form.password2.name }}' name='{{ form.password2.name }}' value="{% if form.password2.value %}{{ form.password2.value }}{% endif %}" placeholder="{% trans "Password" %}" required>
 
     <div class="buttons">
-      <button onclick="javascript:window.history.back(-1);return false;">{% trans 'Cancel' %}</button>
-      <button class="icon-paperplane send" type="submit">{% trans 'Register' %}</button>
+      <button onclick="javascript:window.history.back(-1);return false;">{% trans 'Back' %}</button>
+      <button type="submit">{% trans 'Register' %}</button>
     </div>
   </form>
 {% endblock %}
