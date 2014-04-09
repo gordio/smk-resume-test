@@ -20,12 +20,12 @@
             <dd>{{ profile.user.email }}</dd>
           {% endif %}
           {% if profile.burn_date %}
-            <dt>{% trans "Burn Date" %}</dt>
+            <dt style="clear: left">{% trans "Burn Date" %}</dt>
             <dd>{{ profile.burn_date }}</dd>
           {% endif %}
-          {% if profile.mobile_phone %}
-            <dt>{% trans "Mobile Phone" %}</dt>
-            <dd>{{ profile.mobile_phone }}</dd>
+          {% if profile.mob_phone %}
+            <dt style="clear: left">{% trans "Mobile Phone" %}</dt>
+            <dd>{{ profile.mob_phone }}</dd>
           {% endif %}
         {% endblock %}
       </dl>

@@ -72,13 +72,13 @@ PIPELINE_CSS = {
 PIPELINE_JS = {
     'main': {
         'source_filenames': (
-          'js/jquery-1.11.0.js',
+            'js/jquery-1.11.0.js',
         ),
         'output_filename': 'assets/main.js',
     },
     'resume': {
         'source_filenames': (
-          'js/resume.js',
+            'js/resume.js',
         ),
         'output_filename': 'assets/resume.js',
     },
