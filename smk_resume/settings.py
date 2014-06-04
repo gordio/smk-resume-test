@@ -1,11 +1,3 @@
-"""
-For more information on this file, see
-https://docs.djangoproject.com/en/dev/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/dev/ref/settings/
-"""
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os.path
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -144,7 +136,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
@@ -165,6 +157,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR + '/public/media/'
 
 
-# Important section! Define Development/Production configs
+# Important section!
+# (re)Define Development/Production configs
 
 from smk_resume.settings_local import *
