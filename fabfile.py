@@ -24,6 +24,13 @@ def build():
 
 
 @task
+def r(cmd="127.0.0.1:8000"):
+    """
+    Start project in debug mode (for development).
+    """
+    manage('runserver_plus {0}'.format(cmd))
+
+@task
 def run(cmd="127.0.0.1:8000"):
     """
     Start project in debug mode (for development).

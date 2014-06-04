@@ -22,8 +22,8 @@ Usage:
 
 Recomended:
 
-    venv/bin/pip install django-extensions && echo "from settings import INSTALLED_APPS\nINSTALLED_APPS += ('django_extensions', )" >> smk_resume/settings_local.py
-    fab manage:runserver_plus
+    venv/bin/pip install django-extensions Werkzeug && echo "from settings import INSTALLED_APPS\nINSTALLED_APPS += ('django_extensions', )" >> smk_resume/settings_local.py
+    fab r
 
 
 Production
