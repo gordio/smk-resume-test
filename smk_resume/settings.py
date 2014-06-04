@@ -84,6 +84,10 @@ PIPELINE_JS = {
     },
 }
 
+SOUTH_MIGRATION_MODULES = {
+    'easy_thumbnails': 'easy_thumbnails.south_migrations',
+}
+
 ANONYMOUS_USER_ID = -1
 
 AUTH_PROFILE_MODULE = 'accounts.MyProfile'
