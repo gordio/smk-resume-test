@@ -10,6 +10,8 @@
 <form action="" method="POST">
   {% csrf_token %} 
 
+  {{ form.non_field_errors }}
+
   <span class="right">
     <a href="{% url 'userena_signup' %}" title='{% trans "Register new account" %}'>{% trans "Don't have?" %}</a>
   </span>
