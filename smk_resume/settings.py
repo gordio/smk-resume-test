@@ -29,6 +29,7 @@ INSTALLED_APPS = (
     'guardian',
     'easy_thumbnails',
     'userena',
+    'captcha',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
