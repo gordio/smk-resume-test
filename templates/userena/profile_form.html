@@ -16,10 +16,12 @@
     {# Displaying checkboxes differently #}
     {% if field.name == 'tos' %}
       <label for="id_{{ field.name }}">{{ field }} {{ field.label }}</label>
+      <i>{{ field.help_text }}</i>
     {% else %}
       {{ field.label_tag }}
       {{ field.errors }}
       {{ field }}
+      <i>{{ field.help_text }}</i>
     {% endif %}
   {% endfor %}
 

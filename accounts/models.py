@@ -7,6 +7,6 @@ class MyProfile(UserenaBaseProfile):
     user = models.OneToOneField(User, unique=True,
         verbose_name=_('user'), related_name='my_profile')
     burn_date = models.DateField(_('Burn Date'), null=True,
-        help_text="Enter you burn date (format: DAY.MONTH.YEAR)")
-    mob_phone = models.CharField(_('Mobile Phone'), null=True, max_length=30,
-        blank=True, help_text="Enter you phone number (format: +380550005500)")
+        help_text="Enter you burn date (format: YEAR-MONTH-DAY)")
+    mob_phone = models.CharField(_('Mobile Phone'), null=True, max_length=20,
+        blank=True, help_text="Enter you phone number (format: 099-0005500)")
