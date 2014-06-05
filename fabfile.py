@@ -21,6 +21,7 @@ def build():
     stage('Updating database...')
     manage('syncdb --noinput')
     manage('migrate --noinput')
+    manage('check_permissions')  # userena fix
 
 
 @task
