@@ -34,11 +34,14 @@ class SignupFormExtra(SignupForm):
 
     def save(self):
         new_user = super(SignupFormExtra, self).save()
+        new_user_profile = new_user.get_profile()
 
         new_user.first_name = self.cleaned_data['first_name']
         new_user.last_name = self.cleaned_data['last_name']
-        new_user.burn_date = self.cleaned_data['burn_date']
-        new_user.mob_phone = self.cleaned_data['mob_phone']
+        new_user_profile.burn_date = self.cleaned_data['burn_date']
+        new_user_profile.mob_phone = self.cleaned_data['mob_phone']
+
         new_user.save()
+        new_user_profile.save()
 
         return new_user
