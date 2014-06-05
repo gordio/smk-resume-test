@@ -1,30 +1,7 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load i18n compressed %}
 
 {% block head %}
     {{ block.super }}
-    <style>
-        form, h1 {
-            width: 60%;
-        }
-        .buttons {
-            margin-bottom: 0.5em;
-        }
-        #details {
-            padding: 1em;
-        }
-        #details .mugshot {
-            float: left;
-            padding: 0.25em 1em;
-        }
-        #details dt {
-            font-weight: 800;
-        }
-        form i {
-            display: block;
-            margin-top: -0.5em; /* "fix" fields with help text */
-            margin-bottom: 0.5em;
-            color: #555;
-        }
-    </style>
+    {% compressed_css 'accounts' %}
 {% endblock head %}

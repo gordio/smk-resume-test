@@ -1,0 +1,35 @@
+/* Global */
+.buttons {
+    margin-bottom: 0.5em;
+}
+
+/* "fix" fields with help text */
+form > i {
+    display: block;
+    margin-top: -0.5em; /* "fix" fields with help text */
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+
+/* Left sidebar */
+.left_sidebar-links {
+    padding-left: 1em;
+    list-style-type: none;
+    line-height: 1.5em;
+}
+
+
+/* Profile page */
+#details {
+    padding: 1em;
+}
+
+#details .mugshot {
+    float: left;
+    padding: 0.25em 1em;
+}
+
+#details dt {
+    font-weight: 800;
+}

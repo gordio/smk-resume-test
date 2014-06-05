@@ -59,6 +59,15 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'accounts': {
+        'source_filenames': (
+          'css/accounts.css',
+        ),
+        'output_filename': 'assets/accounts.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
 }
 
 # PIPELINE_DISABLE_WRAPPER = True
