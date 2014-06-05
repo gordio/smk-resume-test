@@ -19,7 +19,9 @@
       {{ field.label_tag }}
       {{ field.errors }}
       {{ field }}
-      <i>{{ field.help_text }}</i>
+      {% if field.help_text %}
+        <i>{{ field.help_text }}</i>        
+      {% endif %}
     {% endif %}
   {% endfor %}
   <div class="buttons">
